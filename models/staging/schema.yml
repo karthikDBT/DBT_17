@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: datafeed_schema
+    database: mydb
+    schema: raw
+    tables:
+      - name: RAW_CUSTOMER
