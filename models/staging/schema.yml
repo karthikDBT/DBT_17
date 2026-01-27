@@ -7,3 +7,13 @@ sources:
     tables:
       - name: RAW_CUSTOMER
       - name: RAW_ORDERS
+        columns:
+              - name: id
+                tests:
+                  - unique
+                  - not_null
+              - name: status
+                tests:
+                  - accepted_values:
+                        values: ['placed', 'shipped', 'completed', 'returned', 'return_pending']
+      - name: SNAP_CUSTOMERS
